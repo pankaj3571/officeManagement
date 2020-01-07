@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+<a routerLink="/employee" routerLinkActive="active"><h1>viewEmpList</h1></a>
+
+<div class="container">
+  
+    <div class="card">
+        <div class="card-header text-center">
+            <h3> Add Employee Details  </h3>
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <label for="Name">  Name </label>
+                    <input type="text" id="Name" class="form-control" [(ngModel)]="Name" name="Name">
+                </div>
+                <div class="form-group">
+                    <label for="Website"> Email </label>
+                    <input type="text" id="pwd" class="form-control" [(ngModel)]="Email" name="Email">
+                </div>
+                <div class="form-group">
+                    <label for="Address"> Role </label>
+                    <input type="text" id="Address" class="form-control" [(ngModel)]="Role" name="Role">
+                </div>
+                <div class="form-group">
+                    <label for="Phone"> Mobile  </label>
+                    <input type="number" id="Phone" class="form-control" [(ngModel)]="Mobile" name="Mobile">
+                </div>
+                <div class="form-group">
+                    <label for="UserName"> UserName  </label>
+                    <input type="text" id="UserName" class="form-control" [(ngModel)]="Username" name="Username">
+                </div>
+                <div class="form-group">
+                    <label for="Organization"> Organization  </label>
+                    <input type="text" id="Organization" class="form-control" [(ngModel)]="Organization" name="Organization">
+                </div>
+                <div class="form-group">
+                    <label for="Password"> Password  </label>
+                    <input type="password" id="Password" class="form-control" [(ngModel)]="Password" name="Password">
+                </div>
+                <div class="form-group">
+                    <div class="text-center">
+                        <button class="btn btn-success" (click)="employeeDetails()"> Signup </button>
+                    </div>
+                </div>
+            </form>
+          
+        </div>
+    </div>
+</div> 

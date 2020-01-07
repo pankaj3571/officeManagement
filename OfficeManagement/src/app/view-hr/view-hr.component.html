@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+<table class="table">
+    <thead>
+        <th>organisation</th>
+        <th>website</th>
+        <th>adress</th>
+        <th>phone</th>
+        <th>action </th>
+    </thead>
+    <tr *ngFor="let x of result;let i=index"> 
+        <td>{{x.Organization}} </td>
+        <td>{{x.Website}} </td>
+        <td>{{x.Address}} </td>
+        <td>{{x.Phone}} </td>
+        <td> <i class="large material-icons" (click)="get(i)" style="cursor:cell;" data-toggle="modal" data-target="#exampleModalCenter">edit</i> <i class="large material-icons" (click)="delete(i)" style="cursor: auto;">delete</i> </td>
+     </tr>
+</table>
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    Launch demo modal
+  </button> -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                    <label for="Organization"> Organisation name </label>
+                    <input type="text" id="Organization" class="form-control" [(ngModel)]="Organization" name="Organization">
+                </div>
+                <div class="form-group">
+                    <label for="Website"> Website </label>
+                    <input type="text" id="pwd" class="form-control" [(ngModel)]="Website" name="Website">
+                </div>
+                <div class="form-group">
+                    <label for="Address"> Address </label>
+                    <input type="text" id="Address" class="form-control" [(ngModel)]="Address" name="Address">
+                </div>
+                <div class="form-group">
+                    <label for="Phone"> phone  </label>
+                    <input type="number" id="Phone" class="form-control" [(ngModel)]="Phone" name="Phone">
+                </div>
+             
+                <!-- <div class="form-group">
+                    <div class="text-center">
+                        <button class="btn btn-success" (click)="Signup()"> Signup </button>
+                    </div>
+                </div> -->
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="edit()" data-dismiss="modal">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
